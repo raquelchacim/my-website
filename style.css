@@ -35,7 +35,7 @@ header:after{
 .mountain{
     position: absolute;
     bottom: -100px;
-    width: 1500px;
+    width: 100%;
     z-index: 19;
 }
 
@@ -209,6 +209,10 @@ section .container{
         display:flex;
         flex-direction:column;
         align-items: center;
+    }
+    .homestead {
+        width: 70%;
+        margin-bottom: 30px;
 }
 Footer
 © 2022 sanctum Inc.

@@ -111,10 +111,16 @@ a:active {
 
 H2{
     font-size: 2EM;
-    font-weight: normal;
     margin-top: 0.67em;
     margin-bottom: 0.67em;
     color: #fff;
+    font-weight: lighter;
+}
+H3{
+    font-size: 1.5EM;
+    margin-bottom: 0.67em;
+    color: #fff;
+    font-weight: lighter;
 }
 
 section{
@@ -156,17 +162,34 @@ section .container{
 .container2 {
     display:flex;
     color: #fff;
+    justify-content: space-evenly;
 }
 .flex-child {
     display: inline-block;
     padding: 1rem 1rem;
-    vertical-align: middle;
     width: 50%;
+    align-self: center;
+    text-align: left;
+
+}
+.homestead {
+    position: relative;
+    width: 30%;
+}
+  .text-block {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background-color: black;
+    opacity: 80%;
+    color: white;
+    width: 90%;
+    padding: 20px 20px 20px 20px;
 }
 
 @media (max-width: 850px){
-    section .container{
-        grid-template-columns: 1fr;
+    .flex-child {
+        width: 100%;
     }
 }
 
@@ -182,6 +205,10 @@ section .container{
     .title{
         font-size: 1.2rem;
     }
+    .container2 {
+        display:flex;
+        flex-direction:column;
+        align-items: center;
 }
 Footer
 © 2022 sanctum Inc.

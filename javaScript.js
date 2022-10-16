@@ -1,3 +1,13 @@
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
+
 const translate = document.querySelectorAll(".translate");
 const big_title = document.querySelector(".big-title");
 const header = document.querySelector("header");
@@ -31,4 +41,5 @@ window.addEventListener('scroll', () => {
     image_container.style.transform = `translateY(${scroll / (section_height + sectionY.top) * -50 + 50}px)`;
 
     border.style.width = `${scroll / (sectionY.top + section_height) * 30}%`;
+
 })

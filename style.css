@@ -2,6 +2,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    color: white;
 }
 
 body{
@@ -74,6 +75,7 @@ a.link{
     color: #fff;
     text-decoration: none;
     text-transform: uppercase;
+    cursor: pointer;
     
 }
 
@@ -81,6 +83,7 @@ a:visited {
     color: #fff;
     text-decoration: none;
     text-transform: uppercase;
+    cursor: pointer;
 
 }
 
@@ -88,6 +91,7 @@ a:hover {
     color: #7EDFCE;
     font-weight: bold;
     text-transform: uppercase; 
+    cursor: pointer;
 
 }
 
@@ -95,6 +99,7 @@ a:active {
     color: #488f83;
     text-decoration: bold;
     text-transform: uppercase; 
+    cursor: pointer;
 
 }
 
@@ -157,6 +162,8 @@ section .container{
     display:flex;
     color: #fff;
     justify-content: space-evenly;
+    margin-left: 2rem;
+    margin-right: 2rem;
 }
 
 .flex-child {
@@ -186,6 +193,77 @@ section .container{
 
 }
 
+.image-grid {
+    --gap: 16px;
+    --num-cols: 4;
+    --row-height: 300px;
+    box-sizing: border-box;
+    margin-left: 3rem;
+    margin-right: 3rem;
+    padding-bottom: 3rem;
+    display: grid;
+    grid-template-columns: repeat(var(--num-cols), 1fr);
+    grid-auto-rows: var(--row-height);
+    gap: var(--gap);
+}
+
+.image-grid>img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.image-grid-col-2 {
+    grid-column: span 2;
+}
+
+.image-grid-row-2 {
+    grid-row: span 2;
+}
+
+input[type=text], select, textarea {
+    width: 100%; 
+    padding: 12px; 
+    border: 1px solid #ccc;
+    box-sizing: border-box; /
+    margin-top: 6px; 
+    margin-bottom: 16px; 
+    resize: vertical;
+  }
+  
+  input[type=submit] {
+    background-color: #6F1ADB;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  input[type=submit]:hover {
+    background-color: #3F0A83;
+  }
+  
+  .form {
+    background-color: #000;
+    background-image: url("./images/moon.jpeg");
+    background-repeat: no-repeat; 
+     background-size: cover;
+     padding-top: 2rem;
+     padding-left: 5rem;
+     padding-right: 5rem;
+     padding-bottom: 5rem;
+  }
+  .form h2 {
+    text-align:center;
+  }
+
+@media screen and (max-width: 1024px) {
+    .image-grid {
+        --num-cols: 2;
+        --row-height: 200px;
+    }
+}
+
 @media (max-width: 850px){
     .flex-child {
         width: 100%;
@@ -213,5 +291,3 @@ section .container{
         width: 70%;
         margin-bottom: 1.8rem;
 }
-Footer
-© 2022 sanctum Inc.
